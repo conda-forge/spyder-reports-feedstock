@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -24,14 +24,16 @@ requirements:
   run:
     - python
     - spyder >=3.2
-    - pweave
+    - pweave 0.25  # [py27]
+    - pweave  # [py3k]
     - qtpy
     - pandoc
     - matplotlib
 
 test:
   imports:
-    - spyder_reports
+    # Skip on Linux because it's segfaulting
+    - spyder_reports  # [win or osx]
 
 about:
   home: https://github.com/spyder-ide/spyder-reports
