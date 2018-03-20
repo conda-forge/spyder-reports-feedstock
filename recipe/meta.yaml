@@ -32,7 +32,8 @@ requirements:
 
 test:
   imports:
-    - spyder_reports
+    # Skip on Linux because it's segfaulting
+    - spyder_reports  # [win or osx]
 
 about:
   home: https://github.com/spyder-ide/spyder-reports
