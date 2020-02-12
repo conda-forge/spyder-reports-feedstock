@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1001
+  number: 1002
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - pweave  # [py3k]
     - qtpy
     - pandoc
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:

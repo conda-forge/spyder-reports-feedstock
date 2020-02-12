@@ -1,2 +1,2 @@
 xorg-x11-server-Xvfb
-libXcomposite
+libXcompositexorg-x11-server-Xorg
