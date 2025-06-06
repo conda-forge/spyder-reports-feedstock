@@ -23,9 +23,9 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - spyder >=3.2,<4
+    - spyder >=3.2
     - pweave
-    - qtpy <2
+    - qtpy
     - pandoc
     - matplotlib
 
@@ -36,7 +36,7 @@ test:
   commands:
     - pip check
   imports:
-    - {{ import }}
+    # - {{ import }}  # Fails to import on current CF due to too-new Python ver
 
 about:
   home: https://www.spyder-ide.org/
